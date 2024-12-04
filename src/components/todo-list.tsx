@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Trash2, Edit2, Check } from 'lucide-react'
 
-interface Todo {
+type Todo = {
   id: number;
   text: string;
 }
 
-export default function TodoList() {
+export function TodoList() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [newTodo, setNewTodo] = useState('');
   const [editingId, setEditingId] = useState<number | null>(null);
